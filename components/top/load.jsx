@@ -5,13 +5,14 @@ export default function load() {
     <>
       <div id={styles.load}>
         <div id={styles.includeP}>
-          <div id={styles.load_area}>
-            <div className={styles.load_one}></div>
-            <div className={styles.load_one}></div>
-            <div className={styles.load_one}></div>
-            <div className={styles.load_one}></div>
+          <div id={styles.rotateArea}>
+            <div id={styles.load_area}>
+              <div className={styles.load_one}></div>
+              <div className={styles.load_one}></div>
+              <div className={styles.load_one}></div>
+              <div className={styles.load_one}></div>
+            </div>
           </div>
-          <p>読み込み中...</p>
         </div>
       </div>
     </>

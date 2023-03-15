@@ -6,6 +6,9 @@
   width: 100%;
   height: 100vh;
 }
+#includeP {
+  position: relative;
+}
 #load_area {
   margin: 0 auto;
   padding: 15px;
@@ -15,7 +18,6 @@
   flex-wrap: wrap;
   box-sizing: content-box;
   border-radius: 5px;
-  background-color: white;
   position: relative;
   animation: loadAnimation 3s infinite;
 }
@@ -29,19 +31,53 @@
 #load {
   text-align: center;
 }
-#load p {
-  font-size: 17px;
-  font-weight: bold;
-}
 
 @keyframes loadAnimation {
   0% {
-    transform: scale(0.6);
+    transform: scale(0.5);
   }
   50% {
-    transform: scale(0.8);
+    transform: scale(0.6);
   }
   100% {
-    transform: scale(0.6);
+    transform: scale(0.5);
+  }
+}
+
+/*ぐるぐる回る*/
+#rotateArea {
+  position: relative;
+  background-color: white;
+}
+#rotateArea::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: solid 5px rgba(128, 128, 128, 0);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotateAnime 1.5s infinite linear, colorAnime 1.5s infinite linear;
+}
+@keyframes rotateAnime {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes colorAnime {
+  0% {
+    border-top: solid 5px rgb(9, 255, 0);
+  }
+  50% {
+    border-top: solid 5px rgb(0, 128, 255);
+  }
+  100% {
+    border-top: solid 5px rgb(9, 255, 0);
   }
 }
