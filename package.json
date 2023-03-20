@@ -1,15 +1,7 @@
 {
-  "name": "next-app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
+  "name": "inforde-top-next",
+  "packageManager": "yarn@3.5.0",
   "dependencies": {
-    "next": "^13.0.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "rss-parser": "^3.12.0"
   }
 }
